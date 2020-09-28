@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+// import { Splide, SplideSlide } from '@splidejs/react-splide'
+import Workout from './components/Workouts.js'
+// import ReactPlayer from "react-player"
+// import Video from '@splidejs/splide-extension-video';
+
 
 function App() {
+
+  // const [counter, changeCounter] = useState(0);
+ 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeCounter(counter + 1);
+    }, 1000);
+ 
+    return () => clearInterval(interval);
+  }, [counter]); ///<--- this right here
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Counter: {counter}</h2>
+      <Workout/>
     </div>
   );
 }
