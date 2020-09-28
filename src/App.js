@@ -1,19 +1,36 @@
-import * as React from "react";
-import { render } from "react-dom";
+import React, { useState, useEffect } from 'react';
+import { Route, Switch, withRouter } from "react-router-dom";
+import axios from 'axios';
+import Workouts from './components/Workouts.js'
+import NavBar from "./components/NavBar";
+import Homepage from "./components/Homepage";
 
-function App() {
-  const [counter, setCounter] = React.useState(60);
+function App () {
 
-  // Third Attempts
-  React.useEffect(() => {
-    const timer =
-      counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
-    return () => clearInterval(timer);
-  }, [counter]);
 
-  return (
-    <div className="App">
-      <div>{counter}</div>
+
+    return (
+      <div className="App">
+        <NavBar/>
+
+          <Switch>
+           <Route
+              path="/workouts"
+              render={() => {
+                return (
+                  <Workouts/>
+                );
+              }}
+            />
+            <Route
+            path="/"
+            render={() => {
+              return (
+                <Homepage/>
+             );
+           }}
+         />       
+          </Switch>
     </div>
   );
 }
