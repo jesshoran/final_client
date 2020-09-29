@@ -30,10 +30,8 @@ export default function Workouts (props) {
             <h1>Generate a custom Workout!</h1>
             <h2>What type of Workout are you feeling today?</h2>
             <button>High Impact</button>
-
-
-
-
+            <button>Mixed Impact</button>
+            <button>Low Impact</button>
         </div>
     )
 }
