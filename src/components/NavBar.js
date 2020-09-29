@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 
 function NavBar(props) {
     let navBarItems = [
-      <li key={1}>
-        <Link to="/">Home</Link>
-      </li>,
-    
+        <li key={1}>
+            <Link to="/">Home</Link>
+        </li>,
         <li key={2}>
-        <Link to="/workouts">Workouts</Link>
-    </li> ]
+            <Link to="/workouts">Workouts</Link>
+        </li>,
+        <li key={3}>
+            <Link to="/generator">Generator</Link>
+        </li>]
+    
+
   
     return (
       <>

@@ -4,6 +4,8 @@ import axios from 'axios';
 import Workouts from './components/Workouts.js'
 import NavBar from "./components/NavBar";
 import Homepage from "./components/Homepage";
+import Generator from "./components/Generator";
+import WorkoutShow from './components/WorkoutShow.js';
 
 function App () {
 
@@ -14,11 +16,27 @@ function App () {
         <NavBar/>
 
           <Switch>
+          <Route
+              path="/workouts/:id"
+              render={() => {
+                return (
+                  <WorkoutShow/>
+                );
+              }}
+            />
            <Route
               path="/workouts"
               render={() => {
                 return (
                   <Workouts/>
+                );
+              }}
+            />
+            <Route
+              path="/generator"
+              render={() => {
+                return (
+                  <Generator/>
                 );
               }}
             />

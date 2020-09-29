@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {useParams, Link} from "react-router-dom";
 import ReactPlayer from "react-player"
 
 export default function Workouts (props) {
@@ -31,8 +32,9 @@ export default function Workouts (props) {
                 return  (
                     <div key={workout.id} className="workout">
                         <h3>{ workout.name }</h3>
-                        <img src={ workout.img } alt="workout"></img>
-                        <ReactPlayer url={workout.demo}></ReactPlayer>
+                        <Link to ={`/workouts/${workout.id}`}> <button className="workout-button"><p>{workout.name}</p></button></Link> 
+                        {/* <img src={ workout.img } alt="workout"></img>
+                        <ReactPlayer url={workout.demo}></ReactPlayer> */}
                         {/* <p>{workout.focus }</p> */}
                     </div>
                 )
