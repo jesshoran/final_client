@@ -8,6 +8,8 @@ import Homepage from "./components/Homepage";
 import Generator from "./components/Generator";
 import WorkoutShow from './components/WorkoutShow.js';
 import AddWorkout from './components/AddWorkout.js';
+import HighImact from './components/HighImpact.js';
+
 
 function App () {
 
@@ -16,6 +18,14 @@ function App () {
         <NavBar/>
 
           <Switch>
+          <Route
+            path="/high_impact"
+            render={() => {
+              return (
+                <HighImact/>
+             );
+           }}
+         />   
           <Route
               path="/add"
               render={() => {

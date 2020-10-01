@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactPlayer from "react-player"
 import Button from '@material-ui/core/Button';
 
-export default function Workouts (props) {
+export default function Generator (props) {
     const [workouts, setWorkouts] = useState([])
 
   const getWorkouts = async () => {

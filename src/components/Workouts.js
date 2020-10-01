@@ -8,10 +8,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-
+import { Typography } from '@material-ui/core';
 
 
 export default function Workouts (props) {
+    
+    
     const [workouts, setWorkouts] = useState([])
   const getWorkouts = async () => {
     try {
@@ -32,24 +34,40 @@ export default function Workouts (props) {
        )()
      },[])
 
- 
-    return (
-        <div>
-            <h1>Workouts</h1>
-            <Grid>
-                
+    const showWorkouts = workouts.map( workout => {
+        return  (
+           
+            <Card key={workout.id} 
+            className="moves">
+                <CardActionArea>
+                <CardContent>
+                    <Typography>{ workout.name }</Typography>
+                <Link to ={`/workouts/${workout.id}`}> <Button className="workout-button"><p>{workout.name}</p></Button></Link>
+                </CardContent>
+                 <CardMedia
+                    style = {{ height: 200, width: 300 }}
+                    image={ workout.img }
+                    title="workout"
+                    />
+                </CardActionArea>
+            </Card>  
+            );
+        });
+        return (
+            <div>
+                <h1>Bodyweight Move Library</h1>
+                <Grid
+                    container
+                    spacing={8}
+s                    justify="center"
+                    >
+                 <Grid 
+                    container
+                    spacing={1}
+                    item xs={12}>
+                        {showWorkouts}
+                </Grid>
             </Grid>
-            {workouts.map( workout => {
-                return  (
-                    <Card key={workout.id} className="workout">
-                        <CardContent>
-                            <h3>{ workout.name }</h3>
-                        <Link to ={`/workouts/${workout.id}`}> <button className="workout-button"><p>{workout.name}</p></button></Link> 
-                        <img src={ workout.img } alt="workout"></img>
-                        </CardContent>
-                        </Card>
-                )
-            })}
         </div>
-    )
-}
+    );
+};
