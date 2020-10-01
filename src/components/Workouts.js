@@ -10,18 +10,9 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 
-const useStyles = makeStyles({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 140,
-    },
-  });
 
 export default function Workouts (props) {
     const [workouts, setWorkouts] = useState([])
-
   const getWorkouts = async () => {
     try {
       const response = await fetch('http://localhost:3000/workouts')
@@ -45,23 +36,18 @@ export default function Workouts (props) {
     return (
         <div>
             <h1>Workouts</h1>
+            <Grid>
+                
+            </Grid>
             {workouts.map( workout => {
                 return  (
-                    <Grid container>
-                        <Grid item xs={12} s={6} m={4}>
-                    <Card key={workout.id} className="workout"
-                    item xs={12}>
+                    <Card key={workout.id} className="workout">
                         <CardContent>
-                       
                             <h3>{ workout.name }</h3>
                         <Link to ={`/workouts/${workout.id}`}> <button className="workout-button"><p>{workout.name}</p></button></Link> 
-                        {/* <img src={ workout.img } alt="workout"></img>
-                        <ReactPlayer url={workout.demo}></ReactPlayer> */}
-                        {/* <p>{workout.focus }</p> */}
+                        <img src={ workout.img } alt="workout"></img>
                         </CardContent>
                         </Card>
-                        </Grid>
-                    </Grid>
                 )
             })}
         </div>
