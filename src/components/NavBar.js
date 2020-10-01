@@ -10,6 +10,9 @@ function NavBar(props) {
             <Link to="/workouts">Workouts</Link>
         </li>,
         <li key={3}>
+        <Link to="/add">Add</Link>
+         </li>,
+        <li key={4}>
             <Link to="/generator">Generator</Link>
         </li>]
     

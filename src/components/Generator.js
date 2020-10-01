@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactPlayer from "react-player"
+import Button from '@material-ui/core/Button';
 
 export default function Workouts (props) {
     const [workouts, setWorkouts] = useState([])
@@ -29,7 +30,7 @@ export default function Workouts (props) {
         <div>
             <h1>Generate a custom Workout!</h1>
             <h2>What type of Workout are you feeling today?</h2>
-            <button>High Impact</button>
+            <Button variant="contained" color="primary">High Impact</Button>
             <button>Mixed Impact</button>
             <button>Low Impact</button>
         </div>
