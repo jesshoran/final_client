@@ -32,8 +32,10 @@ export default function Generator (props) {
             <h1>Generate a custom Workout!</h1>
             <h2>What type of Workout are you feeling today?</h2>
             <Link to ="/high_impact"> <Button variant="contained" color="primary"><p>High Impact</p></Button></Link>
-            <Button>Mixed Impact</Button>
+            <Button>Leg Day</Button>
             <Button>Low Impact</Button>
+            <Button>Core Blast</Button>
+            <Button>Surprise Me!</Button>
         </div>
     )
 }

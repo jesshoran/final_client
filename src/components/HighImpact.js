@@ -32,9 +32,17 @@ function HighImpact (props) {
      },[])
 
      return (
+       <div>
         <div>
-            <HighImpactMove workouts={workouts}/>
+            <HighImpactMove workouts={workouts.group_one}/>
         </div>
+        <div>
+        <HighImpactMove workouts={workouts.group_two}/>
+    </div>
+    <div>
+        <HighImpactMove workouts={workouts.group_three}/>
+    </div>
+    </div>
     )
 }
 export default HighImpact;

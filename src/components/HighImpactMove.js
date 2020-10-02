@@ -35,7 +35,7 @@ const [workouts, setWorkouts] = useState([])
 
      return (
         <div>
-            {workouts.map( workout => {
+            {props.workouts?.map( workout => {
                 return  (
                     <div key={workout.id} className="workout">
                         <h3>{ workout.name }</h3>
