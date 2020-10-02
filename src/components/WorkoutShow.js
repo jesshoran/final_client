@@ -25,6 +25,7 @@ function WorkoutShow (props) {
     <div className="workout">
     <h1>{name}</h1>
       <img src={img} alt={name} className="workout-image" />
+      <ReactPlayer url={demo}></ReactPlayer>
     </div>
     </div>
   );

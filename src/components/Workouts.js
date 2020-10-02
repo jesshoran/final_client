@@ -8,7 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
+import { CardHeader, Typography } from '@material-ui/core';
 
 
 export default function Workouts (props) {
@@ -38,36 +38,37 @@ export default function Workouts (props) {
         return  (
            
             <Card key={workout.id} 
+            style={{margin: 10}}
             className="moves">
-                <CardActionArea>
-                <CardContent>
-                    <Typography>{ workout.name }</Typography>
-                <Link to ={`/workouts/${workout.id}`}> <Button className="workout-button"><p>{workout.name}</p></Button></Link>
-                </CardContent>
+              <CardActionArea>
+                <CardHeader
+                    title={workout.name}
+                    subheader={workout.muscles_worked}>
+                    </CardHeader>           
                  <CardMedia
-                    style = {{ height: 200, width: 300 }}
+                    style = {{ height: 300, width: 300 }}
                     image={ workout.img }
                     title="workout"
                     />
-                </CardActionArea>
+              </CardActionArea>
+              <CardActions>
+                  <Button size="medium" href={`/workouts/${workout.id}`} variant="outlined">Learn More</Button>
+              </CardActions>
             </Card>  
             );
         });
         return (
             <div>
                 <h1>Bodyweight Move Library</h1>
-                <Grid
-                    container
-                    spacing={8}
-s                    justify="center"
-                    >
+                <Grid container
+                spacing={2}>
                  <Grid 
-                    container
-                    spacing={1}
-                    item xs={12}>
+                   container
+                    item xs={12} s={6} m={2}
+                    justify="center">
                         {showWorkouts}
                 </Grid>
-            </Grid>
+                </Grid>
         </div>
     );
 };

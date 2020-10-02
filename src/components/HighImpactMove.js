@@ -8,10 +8,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import HighImpactMove from './HighImpactMove.js';
+import { CardHeader, Typography } from '@material-ui/core';
 
-function HighImpact (props) {
-    const [workouts, setWorkouts] = useState([])
+
+function HighImpactMove (props) {
+        
+const [workouts, setWorkouts] = useState([])
   const getWorkouts = async () => {
     try {
       const response = await fetch('http://localhost:3000/high_impact')
@@ -33,8 +35,16 @@ function HighImpact (props) {
 
      return (
         <div>
-            <HighImpactMove workouts={workouts}/>
+            {workouts.map( workout => {
+                return  (
+                    <div key={workout.id} className="workout">
+                        <h3>{ workout.name }</h3>
+                        <h3> {workout.reps} </h3>
+                    </div>
+                )
+            })}
         </div>
     )
 }
-export default HighImpact;
+
+export default HighImpactMove;
