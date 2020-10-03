@@ -34,11 +34,10 @@ export default function Workouts (props) {
        )()
      },[])
 
-    const showWorkouts = workouts.map( workout => {
+    const showWorkouts = workouts.map( workout  => {
         return  (
-           
             <Card key={workout.id} 
-            style={{margin: 10}}
+            style={{margin: 20, textAlign: 'center'}}
             className="moves">
               <CardActionArea>
                 <CardHeader
@@ -52,14 +51,16 @@ export default function Workouts (props) {
                     />
               </CardActionArea>
               <CardActions>
-                  <Button size="medium" href={`/workouts/${workout.id}`} variant="outlined">Learn More</Button>
+                  <Button style= {{margin: 'auto'}} size="medium" href={`/workouts/${workout.id}`} variant="outlined">Learn More</Button>
               </CardActions>
             </Card>  
             );
         });
         return (
+  
+          <div className="workouts">
             <div>
-                <h1>Bodyweight Move Library</h1>
+                <h1 style={{color: 'black'}}>Bodyweight Move Library</h1>
                 <Grid container
                 spacing={2}>
                  <Grid 
@@ -70,5 +71,7 @@ export default function Workouts (props) {
                 </Grid>
                 </Grid>
         </div>
+        </div>
+
     );
 };

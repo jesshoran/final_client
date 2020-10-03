@@ -7,13 +7,13 @@ function NavBar(props) {
             <Link to="/">Home</Link>
         </li>,
         <li key={2}>
-            <Link to="/workouts">Workouts</Link>
+            <Link to="/workouts">Library</Link>
         </li>,
         <li key={3}>
         <Link to="/add">Add</Link>
          </li>,
         <li key={4}>
-            <Link to="/generator">Generator</Link>
+            <Link to="/generator">Work</Link>
         </li>]
     
 

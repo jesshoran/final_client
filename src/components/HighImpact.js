@@ -9,6 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import HighImpactMove from './HighImpactMove.js';
+// import Timer from './Timer.js'
 
 function HighImpact (props) {
     const [workouts, setWorkouts] = useState([])
@@ -33,9 +34,16 @@ function HighImpact (props) {
 
      return (
        <div>
-        <div>
-            <HighImpactMove workouts={workouts.group_one}/>
-        </div>
+         <h1>15 minute High Impact HIIT Workout</h1>
+         <h3 style={{textAlign: 'center'}}>Here's your personally generated workout, time to crush it!</h3>
+         {/* <Timer/> */}
+         <Grid container>
+                 <Grid 
+                   container
+                    item m={3}>
+                        <HighImpactMove workouts={workouts.group_one}/>
+                </Grid>
+              </Grid>
         <div>
         <HighImpactMove workouts={workouts.group_two}/>
     </div>

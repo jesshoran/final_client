@@ -8,8 +8,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles(() => ({
-  container: {
-
+  button: {
+    color: 'white',
+    borderColor: 'white',
+    height: 100,
+    width: 150,
+    fontSize: 40,
+    margin: 10,
   }
 }));
 
@@ -18,12 +23,14 @@ function Homepage() {
     return (
       <Container className="classes.container">
         <video id="myVideo" className='videoTag' autoPlay loop muted>
-        <source src="./video/Test.mp4" type='video/mp4' />
+        <source src="./video/WithOverlay.mp4" type='video/mp4' />
         </video>
         <div class="content">
-        <h1>Crush HIIT</h1>
-        <Button variant="outlined" color="white">Learn</Button>
-        <Button variant="outlined" >Work</Button>
+        <h1 style={{ position: 'fixed', top: 30, left: 50, fontSize: 60}}>Crush HIIT</h1>
+        <div style = {{ position: 'fixed', bottom: 30, right: 50, fontSize: 60}}>
+        <Button className= {classes.button}  href="http://localhost:3001/workouts" variant="outlined" >Learn</Button>
+        <Button className= {classes.button} href="http://localhost:3001/generator" variant="outlined" color='white' >Work</Button>
+        </div>
         
       </div>
 

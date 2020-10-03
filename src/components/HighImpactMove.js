@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import {useParams, Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { CardHeader, Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import ReactPlayer from "react-player"
 
 
 function HighImpactMove (props) {
@@ -37,10 +39,20 @@ const [workouts, setWorkouts] = useState([])
         <div>
             {props.workouts?.map( workout => {
                 return  (
-                    <div key={workout.id} className="workout">
-                        <h3>{ workout.name }</h3>
-                        <h3> {workout.reps} </h3>
-                    </div>
+                    <Card key={workout.id} style={{textAlign: 'center'}}className="workout">
+                        <CardActionArea>
+                        <CardHeader
+                        title={ workout.name }></CardHeader>
+                        <CardContent> {workout.reps} </CardContent>
+                        <CardMedia
+                       style = {{ height: 300, width: 300, margin: 'auto' }}
+                        image={ workout.img }
+                        title="workout"
+                    /><Button></Button>
+                        {/* <ReactPlayer 
+                                url={workout.demo}></ReactPlayer> */}
+                        </CardActionArea>
+                    </Card>
                 )
             })}
         </div>

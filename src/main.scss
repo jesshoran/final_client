@@ -4,10 +4,33 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  color: blue;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.empty-gym {
+  background-image: url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80");
+  background-color: #F4F9FE;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 body {
   color: black;
+  text-align: center;
+  color: white;
   font-family: 'Open Sans', sans-serif;
+  // background-image: url("https://media.istockphoto.com/photos/empty-gym-picture-id1132006407?k=6&m=1132006407&s=612x612&w=0&h=vOx89bJoTm6tqEMRRZxsmzfdr1jwrmrbE-0yfm7sm74=");
+  // background-image: url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80");
+  background-color: #F4F9FE;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 
@@ -17,7 +40,7 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 /* Add some content at the bottom of the video/page */
@@ -35,7 +58,7 @@ body {
 // Nav Bar
 
 nav {
-  background: grey;
+  background: black;
   padding: 0 2px 0 2px;
   text-align: center;
 
@@ -76,7 +99,8 @@ nav ul {
   position: relative;
   top: 20px;
   margin: auto;
-  width: 50%;
+  width: 60%;
+  height: 80%;
   background: #f9f9f9;
   border-radius: 10px 10px 10px 10px;
   padding: 10px;
@@ -87,8 +111,39 @@ nav ul {
             -1px -1px 10px #ddd,
             1px -1px 10px #ddd,
             -1px 1px 10px #ddd;
-ReactPlayer {
+h1, h4 {
+  color: black;
+h3 {
+  color: blue;
+}
+
+}
+
+}
+
+.work-container {
+
+  position: relative;
+  top: 20px;
   margin: auto;
+  width: 60%;
+  height: 80%;
+  background: #f9f9f9;
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: center;
+  box-shadow: 1px 1px 10px #ddd,
+            -1px -1px 10px #ddd,
+            1px -1px 10px #ddd,
+            -1px 1px 10px #ddd;
+h1, h4 {
+  color: black;
+h3 {
+  color: blue;
+}
+
 }
 
 }

@@ -22,14 +22,29 @@ function WorkoutShow (props) {
   const { name, impact, fitness_type, focus, img, demo, muscles_worked} = workout;
 
   return (
-    <div className="show-container">
+
+      <body className = "empty-gym">
+
+      
+    <div className="show-container" style={{
+      position: 'relative',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+      }} >
     <div className="workout">
     <h1>{name}</h1>
-    <h3>Muscles Worked: {muscles_worked}</h3>
+    <h3 style={{color: 'blue'}}>Muscles Worked: {muscles_worked}</h3>
+    <h4>Impact: {impact}</h4>
+    <h4>Fitness Component: {fitness_type}</h4>
+    <h4>Focus: {focus}</h4>
       {/* <img src={img} alt={name} className="workout-image" /> */}
-      <ReactPlayer style={{margin: 70}} url={demo}></ReactPlayer>
+      <ReactPlayer style={{margin: 20}}
+      url={demo}></ReactPlayer>
     </div>
     </div>
+    </body>
+
   );
 }
 
