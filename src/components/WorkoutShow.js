@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ReactPlayer from "react-player"
-
+import { makeStyles } from '@material-ui/core/styles';
 
 function WorkoutShow (props) {
+
   const params = useParams()
 
   const [workout, setWorkout] = useState([]);
@@ -18,14 +19,15 @@ function WorkoutShow (props) {
   }, []);
 
 
-  const { name, impact, fitness_type, focus, img, demo} = workout;
+  const { name, impact, fitness_type, focus, img, demo, muscles_worked} = workout;
 
   return (
-    <div className="move-page">
+    <div className="show-container">
     <div className="workout">
     <h1>{name}</h1>
-      <img src={img} alt={name} className="workout-image" />
-      <ReactPlayer url={demo}></ReactPlayer>
+    <h3>Muscles Worked: {muscles_worked}</h3>
+      {/* <img src={img} alt={name} className="workout-image" /> */}
+      <ReactPlayer style={{margin: 70}} url={demo}></ReactPlayer>
     </div>
     </div>
   );

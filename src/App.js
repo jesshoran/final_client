@@ -8,7 +8,8 @@ import Homepage from "./components/Homepage";
 import Generator from "./components/Generator";
 import WorkoutShow from './components/WorkoutShow.js';
 import AddWorkout from './components/AddWorkout.js';
-import HighImact from './components/HighImpact.js';
+import HighImpact from './components/HighImpact.js';
+import LowImpact from './components/LowImpact.js';
 
 
 function App () {
@@ -19,10 +20,18 @@ function App () {
 
           <Switch>
           <Route
+            path="/low_impact"
+            render={() => {
+              return (
+                <LowImpact/>
+             );
+           }}
+         />   
+          <Route
             path="/high_impact"
             render={() => {
               return (
-                <HighImact/>
+                <HighImpact/>
              );
            }}
          />   
