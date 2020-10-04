@@ -158,3 +158,54 @@ h3 {
 }
 
 }
+
+
+.add {
+  position: relative;
+  top: 5%;
+  margin: 10px auto 50px auto;
+  width: 50%;
+  background: #f9f9f9;
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: left;
+  box-shadow: 1px 1px 10px #ddd,
+            -1px -1px 10px #ddd,
+            1px -1px 10px #ddd,
+            -1px 1px 10px #ddd;
+  position: relative;
+  text-align: center;
+}
+
+input {
+  border: 1px solid black;
+  text-align: center;
+  margin: auto;
+
+}
+
+input, textarea {
+width: 80%;
+margin-top: 10px;
+margin-bottom: 20px;
+box-sizing: border-box;
+border: 1px solid black;
+border-radius: 5px;
+position: relative;
+text-align: center;
+
+}
+
+textarea {
+  text-align: center;
+resize: none;
+height: 75px;
+}
+
+label {
+color: black;
+text-align: center;
+display: block;
+}

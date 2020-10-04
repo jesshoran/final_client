@@ -36,7 +36,7 @@ export default function Workouts (props) {
 
     const showWorkouts = workouts.map( workout  => {
         return  (
-            <Card key={workout.id} style={{margin: 25, textAlign: 'center'}}className="workout">
+            <Card key={workout.id} style={{width: 400, margin: 25, textAlign: 'center'}}className="workout">
             <CardActionArea>
             <CardHeader
             title={ workout.name }></CardHeader>

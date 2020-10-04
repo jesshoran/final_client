@@ -41,9 +41,10 @@ export default function AddWorkout () {
         }
        
         return (
-          <div className="App">
+          <body className="empty-gym">
+          <div className="add">>
           
-        <h1>Add a Move </h1>
+        <h1 style={{color: 'black'}}>Add a Move </h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name: </label>
           <input
@@ -58,10 +59,16 @@ export default function AddWorkout () {
             onChange={handleChange}>
             </input>
           
-          <label htmlFor="fitness_type">Fitness_type: </label>
+          <label htmlFor="fitness_type">Endurance, Strength or Power: </label>
           <input
             type="text"
             id="fitness_type" value={formInputs.memory}
+            onChange={handleChange}
+          />
+          <label htmlFor="muscles_worked">Muscles Worked: </label>
+          <input
+            type="text"
+            id="muscles_worked" value={formInputs.memory}
             onChange={handleChange}
           />
             <label htmlFor="focus">Focus: </label>
@@ -88,6 +95,7 @@ export default function AddWorkout () {
     
  
       </div>
+      </body>
       );
     }
     

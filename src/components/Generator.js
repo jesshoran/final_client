@@ -36,11 +36,11 @@ export default function Generator (props) {
             </h2>
             <div className="work-container">
             <div>
-            <h3 style={{color: 'black'}}>15 Minute HIIT (High Intensity Interval Training). Just Hitplay and get to work!</h3>
+            <h3 style={{color: 'black'}}>15 Minute HIIT (High Intensity Interval Training): Just Hit play and get to work!</h3>
             <Link to ="/high_impact"> <Button variant="contained" color="primary"><p>High Impact</p></Button></Link>
             </div>
             <div>
-            <h3 style={{color: 'black'}}>Low Impact Workout, don't worry it'll still be tough!</h3>  
+            <h3 style={{color: 'black'}}>Low Impact Workout: Easy on the joints but not on the difficulty! </h3>  
             <Link to ="/low_impact"> <Button variant="contained" color="primary"side ="medium"><p>Low Impact</p></Button></Link>
             </div>
             <div>

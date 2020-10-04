@@ -7,7 +7,7 @@ function NavBar(props) {
             <Link to="/">Home</Link>
         </li>,
         <li key={2}>
-            <Link to="/workouts">Library</Link>
+            <Link to="/workouts">Learn</Link>
         </li>,
         <li key={3}>
         <Link to="/add">Add</Link>
