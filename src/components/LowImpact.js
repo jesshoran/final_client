@@ -14,7 +14,7 @@ function LowImpact (props) {
     const [workouts, setWorkouts] = useState([])
   const getWorkouts = async () => {
     try {
-      const response = await fetch('http://localhost:3000/low_impact')
+      const response = await fetch('https://crush-hiit-api.herokuapp.com/low_impact')
       const data = await response.json()
       console.log(data)
       setWorkouts(data)

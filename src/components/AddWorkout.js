@@ -22,7 +22,7 @@ export default function AddWorkout () {
           event.preventDefault();
           try {
             const response = await axios.post(
-              'http://localhost:3000/workouts',
+              'https://crush-hiit-api.herokuapp.com/workouts',
               formInputs
             );
             const createdWorkout = response.data
@@ -42,7 +42,7 @@ export default function AddWorkout () {
        
         return (
           <body className="empty-gym">
-          <div className="add">>
+          <div className="add">
           
         <h1 style={{color: 'black'}}>Add a Move </h1>
         <form onSubmit={handleSubmit}>

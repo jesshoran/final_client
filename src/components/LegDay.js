@@ -17,7 +17,7 @@ export default function Workouts (props) {
     const [workouts, setWorkouts] = useState([])
   const getWorkouts = async () => {
     try {
-      const response = await fetch('http://localhost:3000/leg_day')
+      const response = await fetch('https://crush-hiit-api.herokuapp.com/leg_day')
       const data = await response.json()
       console.log(data)
       setWorkouts(data)

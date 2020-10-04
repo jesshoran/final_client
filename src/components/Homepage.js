@@ -1,6 +1,4 @@
 import React from "react";
-import NavBar from "./NavBar";
-import ReactPlayer from "react-player"
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,8 +26,8 @@ function Homepage() {
         <div class="content">
         <h1 style={{ position: 'fixed', top: 30, left: 50, fontSize: 60}}>Crush HIIT</h1>
         <div style = {{ position: 'fixed', bottom: 30, right: 50, fontSize: 60}}>
-        <Button className= {classes.button}  href="http://localhost:3001/workouts" variant="outlined" >Learn</Button>
-        <Button className= {classes.button} href="http://localhost:3001/generator" variant="outlined" color='white' >Work</Button>
+        <Button className= {classes.button}  href="/workouts" variant="outlined" >Learn</Button>
+        <Button className= {classes.button} href="/generator" variant="outlined" >Work</Button>
         </div>
         
       </div>

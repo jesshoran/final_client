@@ -18,7 +18,7 @@ function HighImpactMove (props) {
 const [workouts, setWorkouts] = useState([])
   const getWorkouts = async () => {
     try {
-      const response = await fetch('http://localhost:3000/high_impact')
+      const response = await fetch('https://crush-hiit-api.herokuapp.com/high_impact')
       const data = await response.json()
       console.log(data)
       setWorkouts(data)

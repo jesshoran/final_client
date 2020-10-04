@@ -8,7 +8,7 @@ export default function Generator (props) {
 
   const getWorkouts = async () => {
     try {
-      const response = await fetch('http://localhost:3000/workouts')
+      const response = await fetch('https://crush-hiit-api.herokuapp.com/workouts')
       const data = await response.json()
       console.log(data)
       setWorkouts(data)

@@ -12,7 +12,7 @@ function WorkoutShow (props) {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`http://localhost:3000/workouts/${params.id}`);
+      const response = await axios.get(`https://crush-hiit-api.herokuapp.com/workouts/${params.id}`);
       setWorkout(response.data);
     }
     fetchData();

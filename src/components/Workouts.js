@@ -17,7 +17,7 @@ export default function Workouts (props) {
     const [workouts, setWorkouts] = useState([])
   const getWorkouts = async () => {
     try {
-      const response = await fetch('http://localhost:3000/workouts')
+      const response = await fetch('https://crush-hiit-api.herokuapp.com/workouts')
       const data = await response.json()
       console.log(data)
       setWorkouts(data)
@@ -61,6 +61,7 @@ export default function Workouts (props) {
           <div className="workouts">
             <div>
                 <h1 style={{color: 'black'}}>Bodyweight Move Library</h1>
+                <Button size="medium" variant="contained" color="primary" href="/add" variant="outlined">Add a Workout!</Button>
                 <Grid container
                 spacing={2}>
                  <Grid 
@@ -71,6 +72,8 @@ export default function Workouts (props) {
                 </Grid>
                 </Grid>
         </div>
+      
+
         </div>
 
     );
