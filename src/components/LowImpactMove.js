@@ -9,6 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { CardHeader, Typography } from '@material-ui/core';
+import DemoModal from './DemoModal.js';
 
 
 function LowImpactMove (props) {
@@ -46,9 +47,9 @@ const [workouts, setWorkouts] = useState([])
                      style = {{ height: 300, width: 300, margin: 'auto' }}
                       image={ workout.img }
                       title="workout"
-                  /><Button></Button>
-                      {/* <ReactPlayer 
-                              url={workout.demo}></ReactPlayer> */}
+                  />
+                  <DemoModal demo={workout.demo}/>
+                     
                       </CardActionArea>
                   </Card>
               )

@@ -28,7 +28,7 @@ export default function Generator (props) {
      //on click, display 10 high impact workouts
 
     return (
-      <html classname="empty-gym">
+      <html className="empty-gym">
       <body className="empty-gym">
         <div >
             <h1>Custom Workouts</h1>

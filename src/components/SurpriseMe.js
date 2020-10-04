@@ -9,6 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { CardHeader, Typography } from '@material-ui/core';
+import DemoModal from './DemoModal'
 
 
 export default function Workouts (props) {
@@ -45,9 +46,8 @@ export default function Workouts (props) {
            style = {{ height: 300, width: 300, margin: 'auto' }}
             image={ workout.img }
             title="workout"
-        /><Button></Button>
-            {/* <ReactPlayer 
-                    url={workout.demo}></ReactPlayer> */}
+        />
+         <DemoModal demo={workout.demo}/>
             </CardActionArea>
         </Card>
             );
@@ -57,7 +57,7 @@ export default function Workouts (props) {
           <div className="workouts">
             <div>
                 <h1 style={{color: 'black'}}>Totally Random Workout!</h1>
-                <h3 style={{textAlign: 'center', color: 'black'}}>Here's your personally generated workout, time to crush it!</h3>
+                <h3 style={{textAlign: 'center', color: 'black'}}>Surprise Workout! Complete 2 rounds of the exercises below!</h3>
                 <Grid container
                 spacing={5}>
                  <Grid 
