@@ -10,7 +10,7 @@ export default function AddWorkout () {
         fitness_type: '',
         focus: '',
         img: '',
-        demo: ''
+        demo: ''  
       })
     
          const handleChange = (event) => {
