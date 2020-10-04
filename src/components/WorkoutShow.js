@@ -38,7 +38,7 @@ function WorkoutShow (props) {
     <h4>Impact: {impact}</h4>
     <h4>Fitness Component: {fitness_type}</h4>
     <h4>Focus: {focus}</h4>
-      {/* <img src={img} alt={name} className="workout-image" /> */}
+  
       <ReactPlayer style={{margin: 20}}
       url={demo}></ReactPlayer>
     </div>

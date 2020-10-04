@@ -34,7 +34,7 @@ const [workouts, setWorkouts] = useState([])
      },[])
 
      return (
-      <div>
+      <Grid container>
           {props.workouts?.map( workout => {
               return  (
                   <Card key={workout.id} style={{margin: 'auto', width: 400, textAlign: 'center'}}className="workout">
@@ -53,7 +53,7 @@ const [workouts, setWorkouts] = useState([])
                   </Card>
               )
           })}
-      </div>
+      </Grid>
   )
 }
 

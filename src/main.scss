@@ -27,8 +27,9 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0;
-  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  // height: 100%;
 }
 
 body {
@@ -110,6 +111,7 @@ nav ul {
   position: relative;
   top: 20px;
   margin: auto;
+  margin-bottom: 70px;
   width: 60%;
   height: 80%;
   background: #f9f9f9;
@@ -208,4 +210,33 @@ label {
 color: black;
 text-align: center;
 display: block;
+}
+
+.modal {
+width: 900px;
+border: 1px solid black;
+margin: 0 auto;
+margin-top: 10px;
+background: gray;
+}
+
+.hiit-sesh {
+  position: relative;
+  top: 20px;
+  bottom: 20px;
+  margin: 10px auto 50px auto;
+  width: 95%;
+  background: black;
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: left;
+  box-shadow: 1px 1px 10px #ddd,
+            -1px -1px 10px #ddd,
+            1px -1px 10px #ddd,
+            -1px 1px 10px #ddd;
+  position: relative;
+  text-align: center;
 }
