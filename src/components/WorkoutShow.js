@@ -22,7 +22,7 @@ function WorkoutShow (props) {
   const { name, impact, fitness_type, focus, img, demo, muscles_worked} = workout;
 
   return (
-
+<html classname="empty-gym">
       <body className = "empty-gym">
 
       
@@ -44,7 +44,7 @@ function WorkoutShow (props) {
     </div>
     </div>
     </body>
-
+    </html>
   );
 }
 

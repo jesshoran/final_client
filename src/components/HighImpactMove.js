@@ -39,7 +39,7 @@ const [workouts, setWorkouts] = useState([])
         <div>
             {props.workouts?.map( workout => {
                 return  (
-                    <Card key={workout.id} style={{textAlign: 'center'}}className="workout">
+                    <Card key={workout.id} style={{margin: 'auto', width: 400, textAlign: 'center'}}className="workout">
                         <CardActionArea>
                         <CardHeader
                         title={ workout.name }></CardHeader>

@@ -45,15 +45,15 @@ export default function Generator (props) {
             </div>
             <div>
             <h3 style={{color: 'black'}}>Leg Day: Just what it sounds like, all legs all day!</h3>  
-            <Link to ="/low_impact"> <Button variant="contained" color="primary"side ="medium"><p>Leg Day</p></Button></Link>
+            <Link to ="/leg_day"> <Button variant="contained" color="primary"side ="medium"><p>Leg Day</p></Button></Link>
             </div>
             <div>
             <h3 style={{color: 'black'}}>Core Blast: 10 moves that'll surely make you sore tomorrow!</h3>  
-            <Link to ="/low_impact"> <Button variant="contained" color="primary"side ="medium"><p>Core Blast</p></Button></Link>
+            <Link to ="/core_blast"> <Button variant="contained" color="primary"side ="medium"><p>Core Blast</p></Button></Link>
             </div>
             <div>
             <h3 style={{color: 'black'}}>Surprise Me: Feeling daring? Try the surprise me and see what we throw at you!</h3>  
-            <Link to ="/low_impact"> <Button variant="contained" color="primary"side ="medium"><p>Surprise Me</p></Button></Link>
+            <Link to ="/surprise_me"> <Button variant="contained" color="primary"side ="medium"><p>Surprise Me</p></Button></Link>
             </div>
             </div>
         </div>

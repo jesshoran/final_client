@@ -33,6 +33,8 @@ function LowImpact (props) {
 
      return (
        <div>
+         <h1 style={{color: 'black'}}>Low Impact Workout</h1>
+         <h3 style={{textAlign: 'center', color: 'black'}}>Here's your personally generated workout, time to crush it!</h3>
         <div>
             <LowImpactMove workouts={workouts.group_one}/>
         </div>

@@ -34,17 +34,27 @@ const [workouts, setWorkouts] = useState([])
      },[])
 
      return (
-        <div>
-            {props.workouts?.map( workout => {
-                return  (
-                    <div key={workout.id} className="workout">
-                        <h3>{ workout.name }</h3>
-                        <h3> {workout.reps} </h3>
-                    </div>
-                )
-            })}
-        </div>
-    )
+      <div>
+          {props.workouts?.map( workout => {
+              return  (
+                  <Card key={workout.id} style={{margin: 'auto', width: 400, textAlign: 'center'}}className="workout">
+                      <CardActionArea>
+                      <CardHeader
+                      title={ workout.name }></CardHeader>
+                      <CardContent> {workout.reps} </CardContent>
+                      <CardMedia
+                     style = {{ height: 300, width: 300, margin: 'auto' }}
+                      image={ workout.img }
+                      title="workout"
+                  /><Button></Button>
+                      {/* <ReactPlayer 
+                              url={workout.demo}></ReactPlayer> */}
+                      </CardActionArea>
+                  </Card>
+              )
+          })}
+      </div>
+  )
 }
 
 export default LowImpactMove;

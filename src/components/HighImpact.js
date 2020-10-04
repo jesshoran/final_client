@@ -34,16 +34,13 @@ function HighImpact (props) {
 
      return (
        <div>
-         <h1>15 minute High Impact HIIT Workout</h1>
-         <h3 style={{textAlign: 'center'}}>Here's your personally generated workout, time to crush it!</h3>
+         <h1 style={{color: 'black'}}>15 minute High Impact HIIT Workout</h1>
+         <h3 style={{textAlign: 'center', color: 'black'}}>Here's your personally generated workout, time to crush it!</h3>
          {/* <Timer/> */}
-         <Grid container>
-                 <Grid 
-                   container
-                    item m={3}>
+    
+                 <div >
                         <HighImpactMove workouts={workouts.group_one}/>
-                </Grid>
-              </Grid>
+              </div>
         <div>
         <HighImpactMove workouts={workouts.group_two}/>
     </div>

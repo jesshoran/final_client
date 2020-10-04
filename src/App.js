@@ -10,7 +10,9 @@ import WorkoutShow from './components/WorkoutShow.js';
 import AddWorkout from './components/AddWorkout.js';
 import HighImpact from './components/HighImpact.js';
 import LowImpact from './components/LowImpact.js';
-
+import LegDay from './components/LegDay.js';
+import CoreBlast from './components/CoreBlast.js';
+import SurpriseMe from './components/SurpriseMe.js';
 
 function App () {
 
@@ -20,10 +22,26 @@ function App () {
 
           <Switch>
           <Route
+            path="/surprise_me"
+            render={() => {
+              return (
+                <SurpriseMe/>
+             );
+           }}
+         />   
+          <Route
             path="/low_impact"
             render={() => {
               return (
                 <LowImpact/>
+             );
+           }}
+         />   
+         <Route
+            path="/core_blast"
+            render={() => {
+              return (
+                <CoreBlast/>
              );
            }}
          />   
@@ -35,6 +53,14 @@ function App () {
              );
            }}
          />   
+         <Route
+            path="/leg_day"
+            render={() => {
+              return (
+                <LegDay/>
+             );
+           }}
+         />
           <Route
               path="/add"
               render={() => {
