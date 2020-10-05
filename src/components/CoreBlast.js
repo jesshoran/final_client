@@ -57,6 +57,7 @@ export default function Workouts (props) {
             <div>
                 <h1 style={{color: 'black'}}>Core Blast Workout!</h1>
                 <h3 style={{textAlign: 'center', color: 'black'}}>Feel The Burn! Complete 3 rounds of the below exercises!</h3>
+                <div className="hiit-sesh">
                 <Grid container
                 spacing={5}>
                  <Grid 
@@ -66,6 +67,7 @@ export default function Workouts (props) {
                         {showWorkouts}
                 </Grid>
                 </Grid>
+                </div>
         </div>
         </div>
 

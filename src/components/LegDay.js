@@ -59,6 +59,7 @@ const getWorkouts = async () => {
           <div>
               <h1 style={{color: 'black'}}>Leg Day Workout!</h1>
               <h3 style={{textAlign: 'center', color: 'black'}}>It's LEG DAY! Complete 3 rounds of the below exercises!</h3>
+              <div className="hiit-sesh">
               <Grid container
               spacing={5}>
                <Grid 
@@ -68,6 +69,7 @@ const getWorkouts = async () => {
                       {showWorkouts}
               </Grid>
               </Grid>
+              </div>
       </div>
   
       </div>

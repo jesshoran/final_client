@@ -6,35 +6,31 @@ import ReactPlayer from "react-player"
 import ModalBody from './ModalBody.js'
 
 
+export default function DemoModal(props) {
+  const [open, setOpen] = useState(false);
 
-  
-  export default function DemoModal(props) {
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-    // getModalStyle is not a pure function, we roll the style only on the first render
-    const [open, setOpen] = useState(false);
-  
-    const handleOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleClose = () => {
-      setOpen(false);
-    };
-  
-  
-    return (
-      <div>
-        <Button variant="contained" color="primary" onClick={handleOpen}>
-          Demo
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
+  return (
+    <div>
+      <Button variant="contained" color="primary" onClick={handleOpen}>
+        Demo
         </Button>
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
-        > 
-        <ModalBody demo={props.demo}/>
-        </Modal>
-      </div>
-    );
-  }
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        <ModalBody demo={props.demo} />
+      </Modal>
+    </div>
+  );
+}

@@ -55,9 +55,10 @@ export default function Workouts (props) {
         return (
   
           <div className="workouts">
-            <div>
+            <div >
                 <h1 style={{color: 'black'}}>Totally Random Workout!</h1>
                 <h3 style={{textAlign: 'center', color: 'black'}}>Surprise Workout! Complete 2 rounds of the exercises below!</h3>
+                <div className="hiit-sesh">
                 <Grid container
                 spacing={5}>
                  <Grid 
@@ -67,6 +68,7 @@ export default function Workouts (props) {
                         {showWorkouts}
                 </Grid>
                 </Grid>
+                </div>
         </div>
         </div>
 
