@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-
-const [second, setSecond] = useState('00');
-const [minute, setMinute] = useState('00');
-const [isActive, setIsActive] = useState(false);
-const [counter, setCounter] = useState(0);
+import React, { useState, useEffect } from 'react';
 
 const Timer = () => {
+  const [second, setSecond] = useState('00');
+  const [minute, setMinute] = useState('00');
+  // const [isActive, setIsActive] = useState(false);
+  // const [counter, setCounter] = useState(0);
   return (
-    <div className="container">
+    <div className="timer-container">
       <div className="time">
+
         <span className="minute">{minute}</span>
         <span>:</span>
         <span className="second">{second}</span>
