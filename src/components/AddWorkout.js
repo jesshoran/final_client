@@ -41,6 +41,7 @@ export default function AddWorkout () {
         }
        
         return (
+          <html className="empty-gym">
           <body className="empty-gym">
           <div className="add">
           
@@ -96,6 +97,7 @@ export default function AddWorkout () {
  
       </div>
       </body>
+      </html>
       );
     }
     
